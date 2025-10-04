@@ -29,7 +29,7 @@
       font-weight: 500;
     }
     .hero {
-      background: url('/images/GroupSuccess.jpg') center/cover no-repeat;
+      background: url('./images/groupsuccess.jpg') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 6rem 2rem;
@@ -126,5 +126,6 @@
     @media (max-width: 768px) {
       .two-col { flex-direction: column; }
     }
+
 
 
