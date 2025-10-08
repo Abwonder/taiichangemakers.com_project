@@ -22,24 +22,30 @@ footer {
   color: white;
   padding: 1rem 2rem;
 }
+header {
+  background-color: white;
+}
+
 header h1 {
   font-family: var(--heading-font);
   font-size: 1.8rem;
 }
 nav a {
-  color: white;
+  color: black;
   margin-left: 1rem;
   text-decoration: none;
   font-weight: 500;
 }
 nav a:hover {
   text-decoration: underline;
+  text-decoration-color: #f39c12;
 }
 .hero {
   /* background: url('./images/GroupSuccess.jpg') center/cover no-repeat; */
   color: white;
   text-align: center;
   padding: 6rem 2rem;
+  width: 100%;
 }
 .hero-description {
   font-size: 1.3rem;
