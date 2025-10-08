@@ -44,8 +44,10 @@ nav a:hover {
   /* background: url('./images/GroupSuccess.jpg') center/cover no-repeat; */
   color: white;
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 0;
   width: 100%;
+  height: 130vh;
+  padding-top: 180px;
 }
 .hero-description {
   font-size: 1.3rem;
@@ -79,11 +81,13 @@ nav a:hover {
   color: var(--primary);
   border: 2px solid var(--primary);
 }
-section {
+
+section.layoutSection {
   padding: 4rem 2rem;
   max-width: 1100px;
   margin: auto;
 }
+
 section h2 {
   font-family: var(--heading-font);
   font-size: 2rem;
@@ -212,4 +216,8 @@ footer p {
   text-align: left;
   font-size: 14px;
   margin-left: 23rem;
+}
+#mission .ourMission p {
+  font-size: 1.2rem; /* Or use px like 18px */
+  line-height: 1.6;
 }
