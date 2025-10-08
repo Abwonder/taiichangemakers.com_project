@@ -49,6 +49,10 @@ nav a:hover {
   height: 500px;
   padding-top: 90px;
 }
+section.hero.bottom {
+  height: 400px;
+  padding-top: 70px;
+}
 .hero-description {
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
