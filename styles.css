@@ -225,3 +225,216 @@ footer p {
   font-size: 1.2rem; /* Or use px like 18px */
   line-height: 1.6;
 }
+
+/* Committee Section Styles */
+.hero.committee-hero {
+    margin: 2rem auto; /* Center horizontally with margin */
+    width: 95%; /* Not full width */
+    max-width: 1200px;
+    height: 400px; /* Fixed height */
+    border-radius: 20px; /* Rounded corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Override default hero padding if needed */
+    position: relative;
+    overflow: hidden; /* Ensure image stays within rounded corners */
+}
+
+/* Add an overlay to ensure text readability on the new hero */
+.hero.committee-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero.committee-hero .hero-content {
+    position: relative;
+    z-index: 2; /* Text above overlay */
+    text-align: center;
+}
+
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.committee-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.committee-card .image-container {
+    width: 100%;
+    height: 100%;
+}
+
+.committee-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.committee-card:hover img {
+    transform: scale(1.1);
+}
+
+.committee-card .info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    background: rgba(3, 6, 74, 0.85); /* Dark Navy */
+    color: white;
+    transform: translateY(0);
+    transition: background 0.3s ease;
+}
+
+.committee-card:hover .info-overlay {
+    background: rgba(3, 6, 74, 0.95);
+}
+
+.committee-card h4 {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+}
+
+.committee-card p {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    font-weight: 400;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .committee-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Committee Page Layout Updates */
+/* Committee Page Layout Updates */
+.committee-page-wrapper {
+    background-color: #eff4fa; /* Light Lavender/Blue background */
+    padding: 3rem 0;
+    width: 100%;
+}
+
+.committee-section {
+    max-width: 1200px; /* Match hero width */
+    margin: 0 auto 3rem auto;
+    width: 95%;
+}
+
+.section-title {
+    text-transform: uppercase;
+    text-align: center;
+    color: #03064a; /* Dark Navy */
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.white-container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+/* Update committee grid to fit inside white container */
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* Wider gap like reference */
+    padding: 0;
+}
+
+/* Card Updates to match reference */
+.committee-card .image-container {
+    aspect-ratio: 0.92; /* Match reference ~0.92 (wider) */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px; /* Ensure rounded corners */
+}
+
+.committee-card .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.committee-card:hover .image-container img {
+    transform: scale(1.05);
+}
+
+.committee-card .info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 60%, transparent 100%);
+    color: white;
+    padding: 2rem 1.5rem 1.5rem; /* Increased padding */
+    text-align: left; /* Align text left like reference */
+    border-bottom-left-radius: 20px; /* Match card radius */
+    border-bottom-right-radius: 20px;
+}
+
+.committee-card .info-overlay h4 {
+    margin: 0;
+    font-size: 24px; /* Larger name */
+    font-weight: 700;
+    font-family: var(--heading-font);
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.committee-card .info-overlay p {
+    margin: 0;
+    font-size: 18px; /* Larger title */
+    font-weight: 400;
+    opacity: 0.9;
+    color: white;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+    .committee-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .committee-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px; /* Limit width on mobile so cards aren't huge */
+        margin: 0 auto;
+    }
+    
+    .white-container {
+        padding: 1.5rem;
+    }
+}
